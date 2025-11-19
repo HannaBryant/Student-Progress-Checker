@@ -1,18 +1,24 @@
 function checkProgress() {
-    let name= document.getElementById("studentName").value;
-    let G1= number(document.getElementById("G1").value);
-    let G2= number(document.getElementById("G2").value);
-    let G3= number(document.getElementById("G3").value);
+    let name = document.getElementById("studentName").value;
+    let g1 = parseFloat(document.getElementById("g1").value);
+    let g2 = parseFloat(document.getElementById("g2").value);
+    let g3 = parseFloat(document.getElementById("g3").value);
 
-    let average= (G1 + G2 + G3) / 3;
-let result= document.getElementById("result");
+    let result = document.getElementById("result");
 
+    if (!name || isNaN(g1) || isNaN(g2) || isNaN(g3)) {
+        result.textContent = "Please fill in all fields correctly.";
+        result.style.color = "red";
+        return;
+    }
 
-   if (average >= 70){
-        result.textContent = 'Congratulations ${name}, you passed!';
-        result.style.color ="green";
+    let average = (g1 + g2 + g3) / 3;
+
+    if (average >= 70) {
+        result.textContent = `Congratulations ${name}, you passed!`;
+        result.style.color = "green";
     } else {
-        result.textContent = 'Keep practicing ${name}.';
+        result.textContent = `Keep practicing ${name}.`;
         result.style.color = "red";
     }
 }
