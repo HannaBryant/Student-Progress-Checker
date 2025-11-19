@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Progress Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Student Progress Checker</h1>
+
+        <div class="card p-4 shadow">
+            <div class="mb-3">
+                <label class="form-label">Enter Your Name:</label>
+                <input type="text" id="studentName" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Enter Grade 1:</label>
+                <input type="number" id="G1" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Enter Grade 2:</label>
+                <input type="number" id="G2" class="form-control">
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Enter Grade 3:</label>
+                <input type="number" id="G3" class="form-control">
+            </div>
+            <button class="btn btn-secondary w-100" onclick="checkProgress()">Check Progress</button>
+            <h3 id="result" class="text-center mt-4"></h3>
+
+     </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
